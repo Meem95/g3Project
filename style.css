@@ -77,11 +77,10 @@ nav > ul > li>  a{
 main
 {
     max-width: 1340px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 /* feature style*/
 .feature-container{
-    margin-top: 80px;
     display: flex;
     align-items: center;
 }
@@ -89,11 +88,11 @@ main
 .feature-img{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 1.5rem;
 }
 .feature-content{
-    padding-left: 70px;
-    padding-right: 70px;    
+    padding-left: 60px;
+    padding-right: 60px;    
 }
 .feature-description{
     text-align:left;
@@ -110,7 +109,48 @@ main
     font-weight: 700;
     
 }
+/* Facts style*/
+.fact-container{
+    display: flex;
+    justify-content: space-around;
+}
+.fact-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding:40px 30px;
 
+}
+.fact-content .primary-description{
+    text-align:left;
+}
+.fact-container  .card-stats{
+    color: #424242;
+    font-size:2.8rem;
+    margin: 5px;
+}
+.fact-container  .card-title{
+    color: #727272;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 5px;
+
+}
+
+/*Sponsor style*/
+.sponsor .spondor-title{
+    text-align: center;
+}
+ .sopnsor-image{
+    margin-top: 50px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 17px;
+}
+ .sopnsor-image img{
+  width: 165px;
+}
 /* Responsive media queries*/
 /* mobile or small device */
 
@@ -119,9 +159,22 @@ main
         padding: 20px;
 
     }
-    nav
+    nav,
+    .feature-container,
+    .fact-container,
+    .sopnsor-image
     {
         flex-direction: column;
+    }
+    .feature-img{
+        grid-template-columns: 1fr;
+    }
+    .feature-content , .fact-container{
+        padding-left: 20px;
+        padding-right: 20px;    
+    }
+    .fact-container{
+        gap: 20px;
     }
 }
 /* tablet or medium device */
@@ -130,8 +183,18 @@ main
         padding: 50px;
 
     }
-    nav
+    nav,
+    .feature-container,
+    .sopnsor-image
+   
         {
             flex-direction: column;
         }
+        .fact-container .card{
+            
+            padding:20px;
+            justify-content: space-evenly;
+        
+        }
+        
 }
